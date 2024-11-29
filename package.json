@@ -13,7 +13,7 @@
     "aurelia": "2.0.0-beta.20"
   },
   "devDependencies": {
-    "@aurelia/testing": "latest",
+    "@aurelia/testing": "2.0.0-beta.20",
     "@aurelia/vite-plugin": "2.0.0-beta.20",
     "@types/node": "^22.7.5",
     "eslint": "^9.12.0",
