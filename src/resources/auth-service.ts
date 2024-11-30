@@ -12,27 +12,38 @@ export class AuthService {
 
     async login(username: string, password: string) {
         // Simulate authentication
-        // TODO: Add users for student, teacher, and administrator
-        if (username === 'user' && password === 'password') {
-            // TODO: Store which user is authenticated, so we can show different content for each user
+        if (username === 'student' && password === 'password') {
             sessionStorage.setItem('authenticated', 'true');
-
+            sessionStorage.setItem('role', 'student');
             this.loggedIn = true;
-
+            return true;
+        } else if (username === 'professor' && password === 'password') {
+            sessionStorage.setItem('authenticated', 'true');
+            sessionStorage.setItem('role', 'professor');
+            this.loggedIn = true;
+            return true;
+        } else if (username === 'administrator' && password === 'password') {
+            sessionStorage.setItem('authenticated', 'true');
+            sessionStorage.setItem('role', 'administrator');
+            this.loggedIn = true;
             return true;
         }
 
         this.loggedIn = false;
-
         return false;
     }
 
     logout() {
         sessionStorage.removeItem('authenticated');
+        sessionStorage.removeItem('role');
         this.loggedIn = false;
     }
 
     get isLoggedIn() {
         return this.loggedIn;
+    }
+
+    get role() {
+        return sessionStorage.getItem('role');
     }
 }
