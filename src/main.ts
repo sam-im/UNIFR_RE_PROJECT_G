@@ -5,6 +5,11 @@ import { RouterConfiguration } from '@aurelia/router';
 
 Aurelia
   .register(AllConfiguration)
-  .register(RouterConfiguration)
+  .register(
+    RouterConfiguration.customize(
+      // remove the "#" from the URL
+      { useUrlFragmentHash: false }
+    )
+  )
   .app(MyApp)
   .start();

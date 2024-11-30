@@ -1,6 +1,8 @@
 <nav>
-    <a load="">Dashboard</a>
-    <a load="about">About</a>
+    <a load="home">Home</a>
+    <a load="login" if.bind="!auth.isLoggedIn">Login</a>
+    <a load="dashboard" if.bind="auth.isLoggedIn">Dashboard</a>
+    <a if.bind="auth.isLoggedIn" click.trigger="logout()">Logout</a>
 </nav>
 
-<au-viewport class="container"></au-viewport>
+<au-viewport name="main"></au-viewport>
