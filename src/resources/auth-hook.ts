@@ -1,4 +1,4 @@
-import { IAuthService } from './resources/auth-service';
+import { IAuthService } from './auth-service';
 import { ILifecycleHooks, lifecycleHooks } from "aurelia";
 import { inject } from 'aurelia';
 
