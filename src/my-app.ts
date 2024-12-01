@@ -10,21 +10,15 @@ export class MyApp implements IRouteableComponent {
     static routes: IRoute[] = [
         {
             path: '',
-            component: () => import('./views/home'),
-            id: 'home',
-            title: 'Home'
+            component: () => import('./views/dashboard'),
+            id: 'dashboard',
+            title: 'Dashboard'
         },
         {
             path: 'login',
             component: () => import('./views/login'),
             id: 'login',
             title: 'Login'
-        },
-        {
-            path: 'dashboard',
-            component: () => import('./views/dashboard'),
-            id: 'dashboard',
-            title: 'Dashboard'
         },
     ];
 
