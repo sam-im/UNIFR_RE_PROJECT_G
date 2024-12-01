@@ -3,15 +3,14 @@
     <p>There are three different usernames: "student", "professor", and "administrator". And all three uses "password" as password.</p>
 
     <div>
-        <input type="text" placeholder="Username" value.bind="username">
+       <mdc-text-field type="text" label="Username" value.bind="username"></mdc-text-field>
     </div>
 
     <div>
-        <input type="password" placeholder="Password" value.bind="password">
+      <mdc-text-field type="password" label="Password" value.bind="password"></mdc-text-field>
     </div>
 
     <div>
-        <button type="button" click.trigger="login()">Login</button>
+        <button mdc-button outlined type="button" click.trigger="login()">Login</button>
     </div>
-
 </form>
