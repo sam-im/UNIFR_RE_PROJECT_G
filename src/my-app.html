@@ -1,8 +1,19 @@
-<nav>
-    <a load="home">Home</a>
-    <a load="login" if.bind="!auth.isLoggedIn">Login</a>
-    <a load="dashboard" if.bind="auth.isLoggedIn">Dashboard</a>
-    <a load="home" if.bind="auth.isLoggedIn" click.trigger="logout()">Logout</a>
+<!-- Top level navigation bar -->
+<nav id="top-level">
+    <div>
+        <img src="path/to/logo.png" alt="Logo" style="height: 40px;">
+    </div>
+
+    <div style="display: flex; gap: 15px;">
+        <a load="home">Home</a>
+        <a load="dashboard" if.bind="auth.isLoggedIn">Dashboard</a>
+    </div>
+
+    <div>
+        <a load="login" if.bind="!auth.isLoggedIn">Login</a>
+        <a load="home" if.bind="auth.isLoggedIn" click.trigger="logout()">Logout</a>
+    </div>
 </nav>
 
+<!-- Viewport for loading different components based on the route -->
 <au-viewport name="main"></au-viewport>

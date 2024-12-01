@@ -10,7 +10,7 @@ export class AuthHook implements ILifecycleHooks {
 
     canLoad() {
         if ( !this.auth.isLoggedIn ) {
-            return 'login';
+            return false;
         }
 
         return true;

@@ -1,7 +1,16 @@
 @import "./styles/mdc";
 
-html,
-body {
+html, body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
+}
+
+#top-level {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa;
 }
