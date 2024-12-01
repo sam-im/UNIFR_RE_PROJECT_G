@@ -15,7 +15,7 @@ export class Login implements IRouteableComponent {
         const result = await this.auth.login(this.username, this.password);
         
         if (result) {
-            this.router.load('/dashboard');
+            this.router.load('/');
         }
     }
 }

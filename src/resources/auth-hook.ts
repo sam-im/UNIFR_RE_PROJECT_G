@@ -10,7 +10,6 @@ export class AuthHook implements ILifecycleHooks {
     canLoad() {
         if (!this.auth.isLoggedIn) {
             window.location.href = '/login';
-            // popup to let the user know they need to login using aurelia-dialog
             return false;
         }
         return true;
