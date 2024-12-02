@@ -1,0 +1,53 @@
+<h1>My Courses</h1>
+<h2>Active</h2>
+<mdc-data-table>
+    <table>
+        <thead>
+        <tr>
+            <th>Code</th>
+            <th numeric>Credits</th>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr mdc-data-table-row repeat.for="course of active_courses">
+            <td>${course.code}</td>
+            <td numeric>${course.credits}</td>
+            <td>${course.name}</td>
+            <td>
+                <button mdc-button outlined click.trigger="removeCourse(course)">-</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</mdc-data-table>
+
+<h2>Available</h2>
+<mdc-data-table>
+    <table>
+        <thead>
+        <tr>
+            <th>Code</th>
+            <th numeric>Credits</th>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr mdc-data-table-row repeat.for="course of available_courses">
+            <td>${course.code}</td>
+            <td numeric>${course.credits}</td>
+            <td>${course.name}</td>
+            <td>
+                <button mdc-button outlined click.trigger="addCourse(course)">+</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</mdc-data-table>
+
+<div>
+    <button mdc-button raised click.trigger="saveChanges()">Save</button>
+    <button mdc-button outlined click.trigger="discardChanges()">Discard</button>
+</div>
