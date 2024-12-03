@@ -5,12 +5,21 @@
     </div>
 
     <div style="display: flex; gap: 15px;">
-        <a load="dashboard" if.bind="auth.isLoggedIn">Dashboard</a>
+        <a load="dashboard" if.bind="auth.isLoggedIn">
+            <button mdc-button>Dashboard</button>
+        </a>
     </div>
 
-    <div>
-        <a load="login" if.bind="!auth.isLoggedIn">Login</a>
-        <a load="/" if.bind="auth.isLoggedIn" click.trigger="logout()">Logout</a>
+    <div style="display: flex; gap: 15px;">
+        <a load="login" if.bind="!auth.isLoggedIn">
+            <button mdc-button>Login</button>
+        </a>
+        <a load="notifications" if.bind="auth.isLoggedIn">
+            <button mdc-button>Notifications</button>
+        </a>
+        <a load="/" if.bind="auth.isLoggedIn" click.trigger="logout()">
+            <button mdc-button>Logout</button>
+        </a>
     </div>
 </nav>
 
