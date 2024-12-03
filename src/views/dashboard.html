@@ -1,7 +1,7 @@
 <template>
     <h1>Dashboard</h1>
 
-    <mdc-card>
+    <mdc-card if.bind="auth.role === 'student'">
         <mdc-card-primary-action>
             <a href="/my-faculty" style="text-decoration: none;">
                 <div>
@@ -14,7 +14,7 @@
         </mdc-card-primary-action>
     </mdc-card>
 
-    <mdc-card>
+    <mdc-card if.bind="auth.role === 'student'">
         <mdc-card-primary-action>
             <a href="/my-courses" style="text-decoration: none;">
                 <div>
