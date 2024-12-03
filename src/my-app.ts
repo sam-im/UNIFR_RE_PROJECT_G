@@ -26,6 +26,12 @@ export class MyApp implements IRouteableComponent {
             id: 'my-courses',
             title: 'My Courses'
         },
+        {
+            path: 'my-faculty',
+            component: () => import('./views/studies/my-faculty'),
+            id: 'my-faculty',
+            title: 'My Faculty'
+        }
     ];
 
     logout() {
