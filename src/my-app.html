@@ -14,14 +14,22 @@
         <a load="login" if.bind="!auth.isLoggedIn">
             <button mdc-button>Login</button>
         </a>
-        <a load="notifications" if.bind="auth.isLoggedIn">
-            <button mdc-button>Notifications</button>
-        </a>
+        <button mdc-button if.bind="auth.isLoggedIn" click.trigger="toggleNotifications()">Notifications</button>
         <a load="/" if.bind="auth.isLoggedIn" click.trigger="logout()">
             <button mdc-button>Logout</button>
         </a>
     </div>
 </nav>
+
+<!-- Notifications Popup -->
+<div id="notifications-popup" class="popup hidden">
+    <h3>Notifications</h3>
+    <ul>
+        <li>Notification 1</li>
+        <li>Notification 2<li>
+        <li>Notification 3</li>
+    </ul>
+</div>
 
 <!-- Viewport for loading different components based on the route -->
 <au-viewport name="main"></au-viewport>

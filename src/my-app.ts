@@ -34,6 +34,13 @@ export class MyApp implements IRouteableComponent {
         }
     ];
 
+    toggleNotifications() {
+        const popup = document.getElementById('notifications-popup');
+        if (popup) {
+            popup.classList.toggle('hidden');
+        }
+    }
+
     logout() {
         this.auth.logout();
         this.router.load('/');
