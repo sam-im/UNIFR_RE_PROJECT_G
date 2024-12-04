@@ -1,0 +1,18 @@
+<template>
+    <h1>Messages</h1>
+    <div class="tab-pane active" id="inbox">
+        <ul>
+            <li repeat.for="message of messages">
+                <h3>${message.title}</h3>
+                <p>${message.content}</p>
+                <small>From: ${message.sender}</small>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Pagination -->
+    <div>
+        <button mdc-icon-button icon="keyboard_arrow_left"></button>
+        <button mdc-icon-button icon="keyboard_arrow_right"></button>
+    </div>
+</template>
