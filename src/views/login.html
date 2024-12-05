@@ -1,16 +1,19 @@
-<form class="login">
-    <h1>Login</h1>
-    <p>There are three different usernames: "student", "professor", and "administrator". And all three uses "password" as password.</p>
+<template>
+    <form class="login">
+        <h1>Login</h1>
 
-    <div>
-       <mdc-text-field type="text" label="Username" value.bind="username"></mdc-text-field>
-    </div>
+        <div>
+            <mdc-text-field type="text" label="Username" value.bind="username"></mdc-text-field>
+        </div>
 
-    <div>
-      <mdc-text-field type="password" label="Password" value.bind="password"></mdc-text-field>
-    </div>
+        <div>
+            <mdc-text-field type="password" label="Password" value.bind="password"></mdc-text-field>
+        </div>
 
-    <div>
-        <button mdc-button outlined type="button" click.trigger="login()">Login</button>
-    </div>
-</form>
+        <div>
+            <button mdc-button outlined type="button" click.trigger="login()">Login</button>
+        </div>
+
+        <p>There are three different usernames: "student", "professor", and "administrator". And all three use "password" as password.</p>
+    </form>
+</template>

@@ -1,0 +1,40 @@
+.my-faculty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.my-faculty h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.my-faculty div {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-faculty label {
+    font-weight: bold;
+}
+
+.my-faculty .change-faculty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.my-faculty p {
+    color: darkred;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.my-faculty button {
+    margin-top: 10px;
+}

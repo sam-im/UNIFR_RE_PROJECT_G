@@ -1,18 +1,20 @@
 <template>
-    <h1>My Faculty</h1>
+    <div class="my-faculty">
+        <h1>My Faculty</h1>
 
-    <div>
-        <label>Main:</label>
-        <span>${mainFaculty}</span>
-    </div>
+        <div>
+            <label>Main:</label>
+            <span>${mainFaculty}</span>
+        </div>
 
-    <div>
-        <label>Secondary:</label>
-        <span>${secondaryFaculty}</span>
-    </div>
+        <div>
+            <label>Secondary:</label>
+            <span>${secondaryFaculty}</span>
+        </div>
 
-    <div>
-        <p style="color:darkred">You cannot currently apply for any change.</p>
-        <button mdc-button disabled>Change Faculty</button>
+        <div class="change-faculty">
+            <p>You cannot currently apply for changes.</p>
+            <button mdc-button raised disabled>Change Faculty</button>
+        </div>
     </div>
 </template>
