@@ -17,9 +17,9 @@ export class AuthService {
             sessionStorage.setItem('role', 'student');
             this.loggedIn = true;
             return true;
-        } else if (username === 'professor' && password === 'password') {
+        } else if (username === 'teacher' && password === 'password') {
             sessionStorage.setItem('authenticated', 'true');
-            sessionStorage.setItem('role', 'professor');
+            sessionStorage.setItem('role', 'teacher');
             this.loggedIn = true;
             return true;
         } else if (username === 'administrator' && password === 'password') {

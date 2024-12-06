@@ -1,0 +1,28 @@
+.grade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.grade mdc-data-table {
+    margin-top: 10px;
+}
+
+.grade th, .grade td {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.grade #text-field {
+    width: 80px; /* Set the width of the text box */
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}

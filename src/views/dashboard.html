@@ -26,4 +26,17 @@
             </a>
         </mdc-card-primary-action>
     </mdc-card>
+
+    <mdc-card if.bind="auth.role === 'teacher'">
+        <mdc-card-primary-action>
+            <a href="/view-courses" style="text-decoration: none;">
+                <div>
+                    <h2 mdc-headline6>View Courses</h2>
+                </div>
+                <div mdc-body2>
+                    View courses you are affiliated with.
+                </div>
+            </a>
+        </mdc-card-primary-action>
+    </mdc-card>
 </template>

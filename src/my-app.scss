@@ -2,8 +2,10 @@
 @use "./styles/navigation.scss";
 @use "./styles/notifications.scss";
 @use "./styles/login.scss";
-@use "./styles/studies/my-courses.scss";
-@use "./styles/studies/my-faculty.scss";
+@use "./styles/student/my-courses.scss";
+@use "./styles/student/my-faculty.scss";
+@use "./styles/teacher/grade.scss";
+@use "./styles/teacher/view-courses.scss";
 
 html, body {
   margin: 0;

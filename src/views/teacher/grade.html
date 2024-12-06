@@ -1,0 +1,30 @@
+<template>
+    <div class="grade">
+        <p>Enter grades for "Some Course"</p>
+        <mdc-data-table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Number</th>
+                        <th>Name</th>
+                        <th>New Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr mdc-data-table-row repeat.for="student of students">
+                        <td>${student.id}</td>
+                        <td>${student.name}</td>
+                        <td>
+                            <div id="text-field"><mdc-text-field type="numeric"></mdc-text-field></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </mdc-data-table> 
+        <div class="buttons-container">
+            <button mdc-button raised>Save</button>
+            <button mdc-button outlined>Discard</button>
+            <button mdc-button outlined>Finalize</button>
+        </div>
+    </div>
+</template>

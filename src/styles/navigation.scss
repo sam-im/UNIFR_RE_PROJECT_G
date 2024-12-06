@@ -5,3 +5,22 @@
   padding: 10px;
   background-color: #f8f9fa;
 }
+
+#top-level-nav > div {
+  display: flex;
+  align-items: center;
+}
+
+#top-level-nav > div:first-child {
+  flex: 1;
+}
+
+#top-level-nav > div:nth-child(2) {
+  flex: 1;
+  justify-content: center;
+}
+
+#top-level-nav > div:last-child {
+  flex: 1;
+  justify-content: flex-end;
+}

@@ -22,13 +22,13 @@ export class MyApp implements IRouteableComponent {
         },
         {
             path: 'my-courses',
-            component: () => import('./views/studies/my-courses'),
+            component: () => import('./views/student/my-courses'),
             id: 'my-courses',
             title: 'My Courses'
         },
         {
             path: 'my-faculty',
-            component: () => import('./views/studies/my-faculty'),
+            component: () => import('./views/student/my-faculty'),
             id: 'my-faculty',
             title: 'My Faculty'
         },
@@ -37,7 +37,20 @@ export class MyApp implements IRouteableComponent {
             component: () => import('./views/messages'),
             id: 'messages',
             title: 'Messages'
-        }
+        },
+        {
+            path: 'view-courses',
+            component: () => import('./views/teacher/view-courses'),
+            id: 'view-courses',
+            title: 'View Courses'
+        },
+        {
+            // TODO: Add course-id parameter to the path
+            path: 'grade/some-course-id',
+            component: () => import('./views/teacher/grade'),
+            id: 'grade',
+            title: 'Grade'
+        },
     ];
 
     toggleNotifications() {
