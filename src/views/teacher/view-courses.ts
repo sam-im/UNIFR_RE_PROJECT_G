@@ -16,13 +16,13 @@ export class ViewCourses {
             semester: 'Fall 2024'
         },
         {
-            faculty: 'Faculty 3',
+            faculty: 'Faculty 1',
             code: 'CS.103',
             name: 'Course 3',
             semester: 'Fall 2024'
         },
         {
-            faculty: 'Faculty 4',
+            faculty: 'Faculty 1',
             code: 'CS.104',
             name: 'Course 4',
             semester: 'Fall 2024'

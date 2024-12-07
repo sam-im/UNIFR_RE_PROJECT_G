@@ -45,12 +45,17 @@ export class MyApp implements IRouteableComponent {
             title: 'View Courses'
         },
         {
-            // TODO: Add course-id parameter to the path
             path: 'grade/some-course-id',
             component: () => import('./views/teacher/grade'),
             id: 'grade',
             title: 'Grade'
         },
+        {
+            path: 'message-students',
+            component: () => import('./views/teacher/message-students'),
+            id: 'message-students',
+            title: 'Message Students'
+        }
     ];
 
     toggleNotifications() {
