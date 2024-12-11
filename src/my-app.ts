@@ -7,6 +7,7 @@ export class MyApp implements IRouteableComponent {
     constructor(readonly auth: IAuthService, readonly router: IRouter) {
     }
 
+    // Each route, and it's path, is defined here below.
     static routes: IRoute[] = [
         {
             path: '',
@@ -64,6 +65,7 @@ export class MyApp implements IRouteableComponent {
         },
     ];
 
+    // This method toggles the notifications popup.
     toggleNotifications() {
         const popup = document.getElementById('notifications-popup');
         if (popup) {
@@ -71,6 +73,7 @@ export class MyApp implements IRouteableComponent {
         }
     }
 
+    // This method logs out the user and redirects to the login page.
     logout() {
         this.auth.logout();
         this.router.load('/');
