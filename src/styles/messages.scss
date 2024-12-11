@@ -1,0 +1,38 @@
+.messages-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px; 
+}
+
+.messages-page .title {
+    margin: 10px;
+}
+
+.messages-page .tab-pane {
+    width: 100%;
+    max-width: 600px; 
+    text-align: left; 
+}
+
+.messages-page ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.messages-page li {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc; /* Add a divider between messages */
+}
+
+.messages-page button {
+    margin: 10px;
+}
+
+.messages-page mdc-chip {
+    font-size: 1em;
+    margin: 0px;
+    padding: 0px;
+}
