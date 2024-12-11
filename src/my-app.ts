@@ -55,7 +55,13 @@ export class MyApp implements IRouteableComponent {
             component: () => import('./views/teacher/message-students'),
             id: 'message-students',
             title: 'Message Students'
-        }
+        },
+        {
+            path: 'results',
+            component: () => import('./views/student/results'),
+            id: 'results',
+            title: 'Exam Results'
+        },
     ];
 
     toggleNotifications() {

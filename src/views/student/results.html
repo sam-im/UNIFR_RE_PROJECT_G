@@ -1,0 +1,29 @@
+<template>
+    <div class="results-page">
+        <div class="title" mdc-headline4>Grades</div>
+        <mdc-select label="Choose a faculty" value.bind="selectedFaculty">
+            <mdc-list>
+                <mdc-list-item repeat.for="fac of faculties" value.bind="fac.value">${fac.label}</mdc-list-item>
+            </mdc-list>
+        </mdc-select>
+
+        <mdc-data-table>
+            <table>
+                <thead>
+                    <th>Credits</th>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Grade</th>
+                </thead>
+                <tbody>
+                    <tr repeat.for="result of results">
+                        <td>${result.credits}</td>
+                        <td>${result.code}</td>
+                        <td>${result.name}</td>
+                        <td>${result.grade}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </mdc-data-table>
+    </div>
+</template>

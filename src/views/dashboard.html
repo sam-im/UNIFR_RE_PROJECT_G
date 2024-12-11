@@ -1,51 +1,53 @@
 <template>
     <div class="card-container">
-        <mdc-card if.bind="auth.role === 'student'">
+        <mdc-card mdc-ripple href="/my-faculty" if.bind="auth.role === 'student'">
             <mdc-card-primary-action>
-                <a href="/my-faculty">
-                    <div>
-                        <h2 mdc-headline6>My Faculty</h2>
-                    </div>
-                    <div mdc-body2>
-                        View and manage your faculties.
-                    </div>
-                </a>
+                <div>
+                    <h2 mdc-headline6>My Faculty</h2>
+                </div>
+                <div mdc-body2>
+                    View and manage your faculties.
+                </div>
             </mdc-card-primary-action>
         </mdc-card>
-        <mdc-card if.bind="auth.role === 'student'">
+        <mdc-card mdc-ripple href="/my-courses" if.bind="auth.role === 'student'">
             <mdc-card-primary-action>
-                <a href="/my-courses">
-                    <div>
-                        <h2 mdc-headline6>My Courses</h2>
-                    </div>
-                    <div mdc-body2>
-                        View and register your courses.
-                    </div>
-                </a>
+                <div>
+                    <h2 mdc-headline6>My Courses</h2>
+                </div>
+                <div mdc-body2>
+                    View and register your courses.
+                </div>
             </mdc-card-primary-action>
         </mdc-card>
-        <mdc-card if.bind="auth.role === 'teacher'">
+        <mdc-card mdc-ripple href="/view-courses" if.bind="auth.role === 'teacher'">
             <mdc-card-primary-action>
-                <a href="/view-courses">
-                    <div>
-                        <h2 mdc-headline6>View Courses</h2>
-                    </div>
-                    <div mdc-body2>
-                        View courses you are affiliated with.
-                    </div>
-                </a>
+                <div>
+                    <h2 mdc-headline6>View Courses</h2>
+                </div>
+                <div mdc-body2>
+                    View courses you are affiliated with.
+                </div>
             </mdc-card-primary-action>
         </mdc-card>
-        <mdc-card if.bind="auth.role === 'teacher'">
+        <mdc-card mdc-ripple href="/message-students" if.bind="auth.role === 'teacher'">
             <mdc-card-primary-action>
-                <a href="/message-students">
-                    <div>
-                        <h2 mdc-headline6>Message Students</h2>
-                    </div>
-                    <div mdc-body2>
-                        Message students in your courses.
-                    </div>
-                </a>
+                <div>
+                    <h2 mdc-headline6>Message Students</h2>
+                </div>
+                <div mdc-body2>
+                    Message students in your courses.
+                </div>
+            </mdc-card-primary-action>
+        </mdc-card>
+        <mdc-card mdc-ripple href="/results" if.bind="auth.role === 'student'">
+            <mdc-card-primary-action>
+                <div>
+                    <h2 mdc-headline6>Results</h2>
+                </div>
+                <div mdc-body2>
+                    View your exam results.
+                </div>
             </mdc-card-primary-action>
         </mdc-card>
     </div>

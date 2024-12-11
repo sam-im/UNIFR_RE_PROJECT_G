@@ -9,6 +9,16 @@ export class Messages {
             title: 'Assignment due date - Some Course',
             content: 'Due date for the assignment is extended till next week.',
             sender: 'Sender 2'
+        },
+        {
+            title: 'Title 1',
+            content: 'Content 1',
+            sender: 'Sender 3'
+        },
+        {
+            title: 'Title 2',
+            content: 'Content 2',
+            sender: 'Sender 4'
         }
     ];
 }
