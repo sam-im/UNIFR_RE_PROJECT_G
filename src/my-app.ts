@@ -63,6 +63,12 @@ export class MyApp implements IRouteableComponent {
             id: 'results',
             title: 'Exam Results'
         },
+        {
+            path: 'register',
+            component: () => import('./views/administrator/register'),
+            id: 'register',
+            title: 'Register a User'
+        }
     ];
 
     // This method toggles the notifications popup.
