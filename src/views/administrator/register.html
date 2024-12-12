@@ -1,5 +1,25 @@
 <template>
     <div class="register-page">
-        <div mdc-headline4>Register a User</div>
+        <div mdc-headline4 class="title">Register</div>
+        <div mdc-headline6 class="title">Required Informations</div>
+    
+        <div class="fields">
+            <mdc-text-field label="First Name" required value.bind="firstName"></mdc-text-field>
+            <mdc-text-field label="Last Name" required value.bind="lastName"></mdc-text-field>
+        </div>
+        <div class="fields">
+            <mdc-text-field label="Personal Email" required></mdc-text-field>
+            <mdc-text-field label="Phone Number" required type="tel"></mdc-text-field>
+        </div>
+        <mdc-text-field label="Date of birth" type="date" required></mdc-text-field>
+        <mdc-text-field label="Some other information"></mdc-text-field>
+
+        <!-- TODO: Divide the inputs from the reviews. -->
+        <div mdc-headline6 class="title">Review</div>
+        <p>Clicking Register will transmit the newly created account's credentials to the recipient.</p>
+        <mdc-text-field label="Preview of new e-mail" disabled value.bind="emailPreview"></mdc-text-field>
+        <mdc-text-field label="Other info to review" disabled></mdc-text-field>
+
+        <mdc-button raised href="/dashboard">Register</mdc-button>
     </div>
 </template>
