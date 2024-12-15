@@ -60,5 +60,15 @@
                 </div>
             </mdc-card-primary-action>
         </mdc-card>
+        <mdc-card mdc-ripple href="/rooms" if.bind="auth.role === 'administrator'">
+            <mdc-card-primary-action>
+                <div>
+                    <h2 mdc-headline6>Rooms</h2>
+                </div>
+                <div mdc-body2>
+                    View and manage rooms in campus.
+                </div>
+            </mdc-card-primary-action>
+        </mdc-card>
     </div>
 </template>
