@@ -68,6 +68,12 @@ export class MyApp implements IRouteableComponent {
             component: () => import('./views/administrator/register'),
             id: 'register',
             title: 'Register a User'
+        },
+        {
+            path: 'rooms',
+            component: () => import('./views/administrator/rooms'),
+            id: 'rooms',
+            title: 'Resource Management - Rooms'
         }
     ];
 

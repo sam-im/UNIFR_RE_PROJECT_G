@@ -1,0 +1,43 @@
+<template>
+    <div class="rooms-page">
+        <div mdc-headline4 class="title">Rooms</div>
+
+        <div class="query">
+            <mdc-select label="Rooms" value.bind="selectedRoom">
+                <mdc-list>
+                    <mdc-list-item repeat.for="room of rooms" value.bind="room">${room}</mdc-list-item>
+                </mdc-list>
+            </mdc-select>
+            <mdc-text-field label="" type="date" required></mdc-text-field>
+        </div>
+
+        <mdc-data-table if.bind="selectedRoom">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Timeslot</th>
+                        <th repeat.for="day of days">${day}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr mdc-data-table-row repeat.for="timeslot of timeslots">
+                        <td>${timeslot}</td>
+                        <td repeat.for="day of days">
+                            <mdc-chip if.bind="getReservation(selectedRoom, day, timeslot)">
+                                ${getReservation(selectedRoom, day, timeslot)}
+                                <button mdc-chip-action trailing icon="remove" if.bind="getReservation(selectedRoom, day, timeslot)"></button>
+                            </mdc-chip>
+
+                            <button mdc-icon-button icon="add" if.bind="!getReservation(selectedRoom, day, timeslot)"></button>
+                       </td>
+                    </tr>
+                </tbody>
+            </table>
+        </mdc-data-table>
+        <!-- Pagination -->
+        <div if.bind="selectedRoom">
+            <button mdc-icon-button icon="keyboard_arrow_left"></button>
+            <button mdc-icon-button icon="keyboard_arrow_right"></button>
+        </div>
+    </div>
+</template>

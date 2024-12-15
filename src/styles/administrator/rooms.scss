@@ -1,0 +1,16 @@
+.rooms-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rooms-page .title {
+    margin: 10px;
+}
+
+.rooms-page .query {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+}
