@@ -1,9 +1,11 @@
-# front-end
+# Campus Management Front-end
 
 ## Install dependencies
+Install `nodejs` for your operating system.
 
-    npm install
+Install project dependencies using:
+`npm install`
 
-## Start dev web server
-
-    npm start
+## Run
+Start the the dev server using:
+`npm start`
